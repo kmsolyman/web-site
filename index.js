@@ -14,14 +14,14 @@ const Server = http.createServer((req,res)=>{
         })
         }
        if(req.url==="/"){
-        handelReedFile (200,"./index.html")
+        handelReedFile (200,"./index.js")
         }
          
     else if(req.url==="/server.js"){
         handelReedFile(200,"./server.js")
     }
-  else if(req.url==="/index.js"){
-        handelReedFile(200,"./index.js")
+  else if(req.url==="/index.html"){
+        handelReedFile(200,"./index.html")
     }
     else if(req.url==="/styel.css"){
         handelReedFile(200,"./styel.css")
