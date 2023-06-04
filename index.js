@@ -17,22 +17,22 @@ const Server = http.createServer((req,res)=>{
         handelReedFile (200,"./index.html")
         }
          
-    else if(req.url==="/server.js"){
+    else if(req.url==="./server.js"){
         handelReedFile(200,"./server.js")
     }
-  else if(req.url==="/index.js"){
+  else if(req.url==="./index.js"){
         handelReedFile(200,"./index.js")
     }
-    else if(req.url==="/styel.css"){
+    else if(req.url==="./styel.css"){
         handelReedFile(200,"./styel.css")
     }
-    else if(req.url==="/book"){
+    else if(req.url==="./book"){
         handelReedFile(200,"./book.html")
     }
-    else if(req.url==="/about"){
+    else if(req.url==="./about"){
         handelReedFile(200,"./about.html")
     }
-    else if(req.url==="/packegs"){
+    else if(req.url==="./packegs"){
         handelReedFile(200,"./packegs.html")
        }
     else{
