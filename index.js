@@ -20,6 +20,9 @@ const Server = http.createServer((req,res)=>{
     else if(req.url==="/server.js"){
         handelReedFile(200,"./server.js")
     }
+  else if(req.url==="/index.js"){
+        handelReedFile(200,"./index.js")
+    }
     else if(req.url==="/styel.css"){
         handelReedFile(200,"./styel.css")
     }
