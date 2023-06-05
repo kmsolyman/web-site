@@ -21,12 +21,20 @@ const server = http.createServer((req, res) => {
   else if (req.url === "/media") {
     handleReadFile(200, "./media.html");
   } 
-  
+    else if (req.url === "/extras") {
+    handleReadFile(200, "./extras.html");
+  } 
+    else if (req.url === "/marchandics") {
+    handleReadFile(200, "./marchandics.html");
+  } 
+    else if (req.url === "/packages") {
+    handleReadFile(200, "./packages.html");
+  } 
   
   else if (req.url === "/book") {
     handleReadFile(200, "./book.html");
   } else {
-    handleReadFile(200, "./Packages.html");
+    handleReadFile(200, "./admin.html");
   }
 });
   
