@@ -17,8 +17,8 @@ const server = http.createServer((req, res) => {
     handleReadFile(200, "./index.html");
   } else if (req.url === "/about") {
     handleReadFile(200, "./about.html");
-  } else if (req.url === "/contact") {
-    handleReadFile(200, "./contact.html");
+  } else if (req.url === "/book") {
+    handleReadFile(200, "./book.html");
   } else {
     handleReadFile(200, "./error.html");
   }
