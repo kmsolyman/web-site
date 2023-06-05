@@ -12,16 +12,37 @@ const server = http.createServer((req, res) => {
     });
   };
 
-  if (req.url === "/") {
-    handleReadFile(200, "./index.html");
-  } else if (req.url === "/about") {
-    handleReadFile(200, "./about.html");
-  } else if (req.url === "/contact") {
-    handleReadFile(200, "./contact.html");
-  } else {
-    handleReadFile(200, "./error.html");
-  }
-});
+   if(req.url==="/"){
+        handelReedFile (200,"./index.html")
+        }
+         
+    else if(req.url==="/server.js"){
+        handelReedFile(200,"./server.js")
+    }
+    else if(req.url==="/styel.css"){
+        handelReedFile(200,"./styel.css")
+    }
+    else if(req.url==="/styel.css"){
+        handelReedFile(200,"./marchandics.html")
+    }
+    else if(req.url==="/styel.css"){
+        handelReedFile(200,"./media.html")
+    }
+    else if(req.url==="/book"){
+        handelReedFile(200,"./book.html")
+    }
+    else if(req.url==="/about"){
+        handelReedFile(200,"./about.html")
+    }
+    else if(req.url==="/packegs"){
+        handelReedFile(200,"./packegs.html")
+       }
+    else{
+        handelReedFile(200,"./extras.html")
+       }
+    })  ;
+   
+   
 
 server.listen(PORT, hostName, () => {
   console.log(`Server is running at http://${hostName}:${PORT}`);
