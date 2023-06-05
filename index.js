@@ -12,36 +12,18 @@ const server = http.createServer((req, res) => {
     });
   };
 
-   if(req.url==="/"){
-        handelReedFile (200,"./index.html")
-        }
-         
-    else if(req.url==="/server"){
-        handelReedFile(200,"./server.js")
-    }
-    else if(req.url==="/styel"){
-        handelReedFile(200,"./styel.css")
-    }
-    else if(req.url==="/marchandics"){
-        handelReedFile(200,"./marchandics.html")
-    }
-    else if(req.url==="/media"){
-        handelReedFile(200,"./media.html")
-    }
-    else if(req.url==="/book"){
-        handelReedFile(200,"./book.html")
-    }
-    else if(req.url==="/about"){
-        handelReedFile(200,"./about.html")
-    }
-    else if(req.url==="/packegs"){
-        handelReedFile(200,"./packegs.html")
-       }
-    else{
-        handelReedFile(200,"./extras.html")
-       }
-    })  ;
-   
+  
+  if (req.url === "/") {
+    handleReadFile(200, "./views/index.html");
+  } else if (req.url === "/about") {
+    handleReadFile(200, "./views/about.html");
+  } else if (req.url === "/contact") {
+    handleReadFile(200, "./views/contact.html");
+  } else {
+    handleReadFile(200, "./views/error.html");
+  }
+});
+  
    
 
 server.listen(PORT, hostName, () => {
