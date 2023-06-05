@@ -234,6 +234,7 @@ span.psw {
 <!--futter-->
  <script>
 // Get the modal
+    setTimeout(()=>{
 var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
@@ -241,13 +242,16 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+} }}  , 2000);
 </script>
 
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
+
+
+  
+  var myIndex = 0;
 carousel();
 
 function carousel() {
@@ -278,7 +282,7 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+
 </script>
 <script src="index.js"> </script>
 </body>
