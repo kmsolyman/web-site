@@ -16,16 +16,16 @@ const server = http.createServer((req, res) => {
         handelReedFile (200,"./index.html")
         }
          
-    else if(req.url==="/server.js"){
+    else if(req.url==="/server"){
         handelReedFile(200,"./server.js")
     }
-    else if(req.url==="/styel.css"){
+    else if(req.url==="/styel"){
         handelReedFile(200,"./styel.css")
     }
-    else if(req.url==="/styel.css"){
+    else if(req.url==="/marchandics"){
         handelReedFile(200,"./marchandics.html")
     }
-    else if(req.url==="/styel.css"){
+    else if(req.url==="/media"){
         handelReedFile(200,"./media.html")
     }
     else if(req.url==="/book"){
