@@ -1,88 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>ABOUT</title>
+<title>home page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
 </style>
 </head>
-<body class="w3-theme-l5">
-
-  <section>
-    <a href="admin.html" class="logo">FARJANA AKTER</a>
-    <div class="menu">
-       <a  class="active" href="./">Home</a>
-       <a href="./about">About</a>
-       <a href="./Packages">Packages</a>
-       <a href="./book">Book</a>
-</div>
-
-  </section>
+<body>
+  
 
 <!-- Navbar -->
 <div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="/" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Logo</a>
-  <a href="/media" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-  <a href="/extras" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
-  <a href="/marchandics" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-  <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-      <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-      <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
-      <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="./about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="./Packages" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PACKAGES</a>
+    <a href="./book" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOK</a>
+     <a href="./admin" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOGIN</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="./marchandics" class="w3-bar-item w3-button">Merchandise</a>
+        <a href="./extras" class="w3-bar-item w3-button">Extras</a>
+        <a href="./media" class="w3-bar-item w3-button">Media</a>
+      </div>
     </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    <img src="https://scontent.fdac137-1.fna.fbcdn.net/v/t39.30808-6/281332855_662868314810890_4978505421095449958_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFAPbheIRJbDkW7BW01Hb6V7NTq4IHoimzs1OrggeiKbAtulFDqfXpP7tmNMIhXrdWQsi_OJ0XDZKKji2_ahvw6&_nc_ohc=ap1lgcSTYJIAX-o1Ftw&_nc_ht=scontent.fdac137-1.fna&oh=00_AfA5mBRf37tfZpudBKNYBlynj6Rur40Jva0IqO3pGHJZlQ&oe=64835F76" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-  </a>
- </div>
 </div>
 
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-  <a href="/book" class="w3-bar-item w3-button w3-padding-large">BOOK</a>
-  <a href="./extras" class="w3-bar-item w3-button w3-padding-large">EXTERAS</a>
-  <a href="./about" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
-  <a href="./marchandics" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+  <a href="./about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+  <a href="./Packages" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PACKEGS</a>
+  <a href="./book" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BOOK</a>
 </div>
 
 
+  
+  
+  
+  
+  
+  
+</div>
+
+<!-- Image of location/map -->
+<img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjczMTc0fQ&fit=crop&h=230&w=320&crop=edges" class="w3-image w3-greyscale-min" style="width:100%">
 
 <!-- Footer -->
-<footer class="w3-container w3-theme-d3 w3-padding-16">
-  <h5>Footer</h5>
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="./about.html" target="_blank">farjama Akter mim</a></p>
 </footer>
+<!--futter-->
 
-<footer class="w3-container w3-theme-d5">
-  <p>Powered by <a href="https://th.bing.com/th/id/OIP._arQ_hW8FYf_d6U4cUTgfgHaJQ?w=208&h=260&c=7&r=0&o=5&pid=1.7" target="_blank">FARJANA AKTAR MIM</a></p>
-</footer>
- 
 <script>
-// Accordion
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme-d1";
-  } else { 
-    x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
   }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
 }
 
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
@@ -90,7 +105,15 @@ function openNav() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
-</script>
 
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script src="index.js"> </script>
 </body>
-</html> 
+</html>
