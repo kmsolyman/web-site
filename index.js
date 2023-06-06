@@ -49,7 +49,7 @@ const server = http.createServer((req, res) => {
   else if (req.url === "/book") {
     handleReadFile(200, "./book.html");
   } else {
-    handleReadFile(200, "./server.js");
+    handleReadFile(200, "./admin.html");
   }
 });
   
