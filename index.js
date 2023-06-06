@@ -46,6 +46,10 @@ const server = http.createServer((req, res) => {
     handleReadFile(200, "./admin.html");
 
   }
+  else if (req.url === "/index") {
+    handleReadFile(200, "./index.php");
+  }
+  
   
   
   else if (req.url === "/book") {
