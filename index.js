@@ -36,11 +36,7 @@ const server = http.createServer((req, res) => {
      
   
   
-  else if (req.url === "/server") {
-
-    handleReadFile(200, "./server.js");
-
-  }
+  
 
   
   else if (req.url === "/admin") {
