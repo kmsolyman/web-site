@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
 
   
   if (req.url === "/") {
-    handleReadFile(200, "./register.php");
+    handleReadFile(200, "./index.html");
   } else if (req.url === "/about") {
     handleReadFile(200, "./about.html");
   } 
@@ -30,8 +30,8 @@ const server = http.createServer((req, res) => {
     else if (req.url === "/Packages") {
     handleReadFile(200, "./Packages.html");
   } 
-    else if (req.url === "/index") {
-    handleReadFile(200, "./index.html");
+    else if (req.url === "/register") {
+    handleReadFile(200, "./register.php");
   }
      else if (req.url === "/login.php") {
 
