@@ -33,15 +33,30 @@ const server = http.createServer((req, res) => {
     else if (req.url === "/register") {
     handleReadFile(200, "./register.php");
   }
-     else if (req.url === "/login.php") {
+     else if (req.url === "/login") {
 
     handleReadFile(200, "./login.php");
 
   }
   
-  else if (req.url === "/server.php") {
+  else if (req.url === "/server") {
 
     handleReadFile(200, "./server.php");
+
+  }
+  else if (req.url === "/server") {
+
+    handleReadFile(200, "./server.js");
+
+  }
+  else if (req.url === "/index") {
+
+    handleReadFile(200, "./index.php");
+
+  }
+  else if (req.url === "/admin") {
+
+    handleReadFile(200, "./admin.html");
 
   }
   
@@ -49,7 +64,7 @@ const server = http.createServer((req, res) => {
   else if (req.url === "/book") {
     handleReadFile(200, "./book.html");
   } else {
-    handleReadFile(200, "./admin.html");
+    handleReadFile(200, "./server.js");
   }
 });
   
