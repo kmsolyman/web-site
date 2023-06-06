@@ -35,7 +35,9 @@ const server = http.createServer((req, res) => {
   }
      
   
-  
+  else if (req.url === "/login") {
+    handleReadFile(200, "./login.php");
+  }
   
 
   
