@@ -111,5 +111,7 @@
 		?>
 	</div>
 	<footer align="right" style="font-size:10px; color:#191919">&copy; 2018 | Jubayer Alam | 1420268042 | NSU</footer>
-</body>
+            <script src="index.js"></script>
+	<script src="admin.html"></script>
+	</body>
 </html>
