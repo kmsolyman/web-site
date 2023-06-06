@@ -1,3 +1,6 @@
+<?php include('server.php') ?>
+<!DOCTYPE html>
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -294,7 +297,8 @@ a.ssolink {
 
            
     
-  <form class="modal-content animate" herf="/index.html" action="/action_page.php" method="post">
+  <form class="modal-content animate" action="/login.php" method="post">
+    <?php include('errors.php'); ?>
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="/index" alt="Avatar" class="avatar">
