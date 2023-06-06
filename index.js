@@ -33,11 +33,7 @@ const server = http.createServer((req, res) => {
     else if (req.url === "/register") {
     handleReadFile(200, "./register.php");
   }
-     else if (req.url === "/login") {
-
-    handleReadFile(200, "./login.php");
-
-  }
+     
   
   else if (req.url === "/server") {
 
