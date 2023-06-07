@@ -105,5 +105,6 @@ form, .content {
   		Already a member? <a href="login.php">Sign in</a>
   	</p>
   </form>
+	<script src="app.js"></script>  
 </body>
 </html>
