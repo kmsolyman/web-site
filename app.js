@@ -17,7 +17,7 @@ const pool  = mysql.createPool({
     host            : 'localhost',
     user            : 'root',
     password        : 'password',
-    database        : 'nodejs_beers'
+    database        : 'project'
 })
    
 // Get all beers
