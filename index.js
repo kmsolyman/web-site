@@ -47,7 +47,7 @@ const server = http.createServer((req, res) => {
 
   }
   else if (req.url === "/index") {
-    handleReadFile(200, "./index.php");
+    handleReadFile(200, "./index.html");
   }
   
   
