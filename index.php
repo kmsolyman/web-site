@@ -13,6 +13,8 @@
 ?>
   
 <!DOCTYPE html>
+<?php include './singout.html'; ?>
+<?php include './index.html'; ?>
 <html lang="en">
 <head>
 <title>home page</title>
@@ -70,8 +72,8 @@ body {font-family: "Lato", sans-serif}
 	<a href="/singout" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Singout</a>
     
     <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    
-	
+    <?php include './singout.html'; ?>
+	<?php include './index.html'; ?>
   	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
