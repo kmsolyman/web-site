@@ -61,9 +61,9 @@ body {font-family: "Lato", sans-serif}
         <a href="./extras" class="w3-bar-item w3-button">Extras</a>
         <a href="./media" class="w3-bar-item w3-button">Media</a>
       </div>
-    </div>
-</div>
-	Welcome to my project page	
+    
+
+		
 <div class="content">
   	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
