@@ -65,6 +65,13 @@ body {font-family: "Lato", sans-serif}
 
 		
 <div class="content">
+	
+	
+	<a href="/singout" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Singout</a>
+    
+    <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    
+	
   	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
