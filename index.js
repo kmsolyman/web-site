@@ -39,7 +39,7 @@ const server = http.createServer((req, res) => {
     else if (req.url === "/admin") {
     handleReadFile(200, "./admin.html");
   
-  
+  }
   else {
     handleReadFile(200, "./admin.html");
   }
