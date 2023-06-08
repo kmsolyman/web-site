@@ -48,7 +48,7 @@ body {font-family: "Lato", sans-serif}
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
      <a href="/singout" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Singout</a>
     
-    <a href="/index" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     
     <a href="./about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
     <a href="./Packages" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PACKAGES</a>
