@@ -1,4 +1,18 @@
-CTYPE html>
+
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>home</title>
@@ -11,8 +25,6 @@ CTYPE html>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 </style>
-
-
 <!-- contact -->
 <style>
 *{box-sizing: border-box;}
@@ -144,7 +156,7 @@ body {font-family: "Lato", sans-serif}
 }
 </style>
 
-<!-- token locgin dropdown -->
+<!-- token login dropdown -->
 <style>
 body {
   min-height: 100%;
@@ -282,7 +294,7 @@ body {
 }
 
 .card {
-  margin: 30px auto;
+  margin: 20px auto;
   width: 300px;
   height: 300px;
   border-radius: 40px;
@@ -342,7 +354,7 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 40px;
-  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-image: url('https://images.pexels.com/photos/589841/pexels-photo-589841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -354,6 +366,7 @@ body {
 
 <!-- Recently Viewed Adventures --sale ted -->
 <style>
+
   @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
   @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
  .snip1418 {
@@ -361,9 +374,9 @@ body {
   font-family: "Raleway", Arial, sans-serif;
   position: relative;
   overflow: hidden;
-  margin:;
-  min-width: 230px;
-  max-width: 315px;
+  margin: 9px 8px;
+  min-width: 200px;
+  max-width: 300px;
   width: 100%;
   background: #ffffff;
   text-align: left;
@@ -376,19 +389,22 @@ body {
   perspective: 20em;
 }
 .snip1418 * {
-  
+  display: inline-block;
+
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 .snip1418 img {
- 
+  display: inline-block;
+
   max-width: 100%;
   vertical-align: top;
   position: relative;
 }
 .snip1418 .add-to-cart {
+  display: inline-block;
 
   position: absolute;
   top: 0;
@@ -407,7 +423,8 @@ body {
   transform-origin: 100% 0;
 }
 .snip1418 .add-to-cart i {
- 
+  display: inline-block;
+
   margin-right: 10px;
   width: 40px;
   line-height: 40px;
@@ -419,23 +436,31 @@ body {
 }
 .snip1418 figcaption {
   padding: 20px;
-  
+  display: inline-block;
+
 }
 .snip1418 h3,
 .snip1418 p {
   margin: 0;
+  display: inline-block;
+
 }
 .snip1418 h3 {
   font-size: 1.5em;
   font-weight: 700;
   margin-bottom: 10px;
   text-transform: uppercase;
+  display: inline-block;
+
+
  
 }
 .snip1418 p {
   font-size: 0.9em;
   letter-spacing: 1px;
   font-weight: 400;
+  display: inline-block;
+
 
 }
 .snip1418 .price {
@@ -443,20 +468,26 @@ body {
   font-size: 1.5em;
   line-height: 48px;
   letter-spacing: 1px;
+  display: inline-block;
+
   
 }
 .snip1418 .price s {
-  margin-right: 105px;
+  margin-right: 199995px;
   opacity: 0.5;
   font-size: 0.9em;
+  display: inline-block;
+
   
 }
 .snip1418 a {
   position: absolute;
-  top: 0;
-  bottom: 0px;
-  left: 0;
-  right: 0;
+  top: 120;
+  bottom: 330px;
+  left: 660;
+  right: 990;
+  display: inline-block;
+
 
 }
 .snip1418:hover .add-to-cart,
@@ -464,11 +495,15 @@ body {
   opacity: 3;
   -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg);
+  display: inline-block;
+
  
 }
 .snip1418:hover .add-to-cart i,
 .snip1418.hover .add-to-cart i {
   background-color: #2980b9;
+  display: inline-block;
+
 
 }
 </style>
@@ -565,57 +600,40 @@ body {
      
 <!-- The Booking Section -->
 <style>
-body {
-  font-family: Arial;
-  font-size: 17px;
-  padding: 8px;
-}
-
-* {
-  box-sizing: border-box;
-  
-
- 
-}
 
 .row {
-  
-  box-sizing: border-box;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 48px;
+
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  margin: 0 -16px;
+  margin: 20 56px;
 }
 
 .col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
+  -ms-flex: 5%; /* IE10 */
+  flex: 5%;
 }
 
 .col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
+  -ms-flex: 5%; /* IE10 */
+  flex: 5%;
 }
 
 .col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
+  -ms-flex: 5%; /* IE10 */
+  flex: 5%;
 }
 
 .col-25,
 .col-50,
 .col-75 {
-  padding: 0 16px;
+  padding: 700 906px;
 }
 
-.container {
-  display:inline-block;
-  background-color: #f2f2f2;
-  padding: 20px 20px 10px 40px;
-  border: 5px solid lightgrey;
-  border-radius: 30px;
-}
 
 input[type=text] {
   width: 100%;
@@ -681,7 +699,7 @@ span.price {
 .containers {
   display:inline-block;
   position: relative;
-  width:19%;
+  width:23%;
 
 }
 
@@ -695,8 +713,8 @@ span.price {
   display:inline-block;
   position: absolute;
   bottom: 100%;
-  left: 200px;
-  right: 300px;
+  left: 2px;
+  right: 3px;
   background-color: #008CBA;
   overflow: hidden;
   width: 100%;
@@ -713,10 +731,10 @@ span.price {
 .text {
   display:inline-block;
   color: black;
-  font-size: 24px;
+  font-size: 4px;
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 2%;
+  left: 0%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -727,8 +745,8 @@ span.price {
   color: black;
   font-size: 24px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 5%;
+  left: 0%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -740,8 +758,8 @@ span.price {
   color: black;
   font-size: 24px;
   position: absolute;
-  top: 80%;
-  left: 50%;
+  top: 8%;
+  left: 0%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -749,8 +767,8 @@ span.price {
   border: 2px solid black;
   background-color: white;
   color: black;
-  padding: 14px 28px;
-  font-size: 16px;
+  padding: 1px 2px;
+  font-size: 6px;
   cursor: pointer;
   border-color: #ff9800;
   color: orange;
@@ -914,17 +932,10 @@ video{
      <a href="#login"  class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-shopping-cart w3-margin-right"></i>Prement</a>
     </button>
     <a href="#HOME" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a  href="./about.html"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-    <a href="./packegs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PACKAGES</a>
-    <a href="./contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-      <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="marchandics.html" class="w3-bar-item w3-button">Merchandise</a>
-        <a href="extras.html" class="w3-bar-item w3-button">Extras</a>
-        <a href="media.html" class="w3-bar-item w3-button">Media</a>
-      </div>
-    </div>
+    <a  href="./about.php"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="./package.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PACKAGES</a>
+    <a href="./contact.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+      
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
@@ -932,11 +943,518 @@ video{
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#login" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
   <a href="index.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
-  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
-  <a href="packags.html"  class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PACKEGS</a>
-  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="about.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+  <a href="package.php"  class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PACKEGS</a>
+  <a href="./contact.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
 </div>
 </section>
+<!-- Automatic Slideshow Images -->
+<section>
+  <!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+<!-- Automatic Slideshow Images -->
+<div class="mySlides w3-display-container w3-center">
+  <img src="https://images.pexels.com/photos/2161449/pexels-photo-2161449.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%">
+  <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    <h3>Los Angeles</h3>
+    <p><b>We had the best time playing at Venice Beach!</b></p>   
+  </div>
+</div>
+<div class="mySlides w3-display-container w3-center">
+  <img src="https://images.pexels.com/photos/763771/pexels-photo-763771.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" style="width:100%">
+  <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    <h3>New York</h3>
+    <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
+  </div>
+</div>
+<div class="mySlides w3-display-container w3-center">
+  <img src="https://images.pexels.com/photos/7245352/pexels-photo-7245352.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" style="width:100%">
+  <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    <h3>Chicago</h3>
+    <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
+  </div>
+</div>
+</section>
+
+<!--prement  login Modal -->
+<section>
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<div id="login" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('login').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+<?php
+  $servername = "localhost";
+  $username ="root";
+  $password ="";
+  $dbname ="bilregister";
+
+  $conn = mysqli_connect($servername,$username,$password,$dbname);
+      if($conn)
+       {
+        echo "";
+       }
+       else
+       {
+        echo "connect faild";
+       }
+
+?>
+<div class="row" style="display:inline-block">
+           <div class="col-75" style="display:inline-block">
+              <div class="container" style="display:inline-block">
+              
+          <form  method="POST" action="#" style="display:inline-block">
+                       
+                 <div class="row" style="display:inline-block">
+                      <div class="col-50" style="display:inline-block">
+                            <h3>Billing Address</h3>
+                     <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                          <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                     <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                          <input type="text" id="email" name="email" placeholder="john@example.com">
+                     <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                          <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                     <label for="city"><i class="fa fa-institution"></i> City</label>
+                          <input type="text" id="city" name="city" placeholder="New York">
+                 <div class="row">
+                    <div class="col-50">
+                      <label for="state">State</label>
+                         <input type="text" id="state" name="state" placeholder="NY">
+                    </div>
+                        <div class="col-50">
+                           <label for="zip">Zip</label>
+                                <input type="text" id="zip" name="zip" placeholder="10001">
+                        </div>
+                    </div>
+                   </div>
+                      <div class="col-50" style="display:inline-block">
+                              <h3>Payment</h3>
+                              <label for="fname">Accepted Cards</label>
+                      <div class="icon-container">
+                               <i class="fa fa-cc-visa" style="color:navy;"></i>
+                               <i class="fa fa-cc-amex" style="color:blue;"></i>
+                               <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                               <i class="fa fa-cc-discover" style="color:orange;"></i>
+                     </div>
+                          <label for="cname">Name on Card</label>
+                           <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                               <label for="ccnum">Credit card number</label>
+                           <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                               <label for="expmonth">Exp Month</label>
+                           <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                      <div class="row">
+                        <div class="col-50">
+                             <label for="expyear">Exp Year</label>
+                                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                         </div>
+                              <div class="col-50">
+                                     <label for="cvv">CVV</label>
+                                         <input type="text" id="cvv" name="cvv" placeholder="352">
+                               </div>
+                          </div>
+                    </div>
+               </div>
+                   <label>
+                     <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                   </label>
+                       <input type="submit" value="submit" class="btn"  name="submit">
+         </form>
+    </div>
+  </div>
+<?php
+     if(isset($_POST['submit']))
+    {
+      $_firstname  = $_POST['firstname'];
+      $_email      = $_POST['email'];
+      $_address    = $_POST['address'];
+      $_city       = $_POST['city'];
+      $_state      = $_POST['state'];
+      $_zip        = $_POST['zip'];
+      $_cardname   = $_POST['cardname'];
+      $_cardnumber = $_POST['cardnumber'];
+      $_expmonth   = $_POST['expmonth'];
+      $_expyear    = $_POST['expyear'];
+      $_cvv        = $_POST['cvv'];
+  
+     $query = "INSERT INTO  bilform VALUES('$_firstname','$_email',' $_address',' $_city','$_state','$_zip','$_cardname',
+      '$_cardnumber',' $_expmonth','$_expyear','$_cvv')";
+
+           $data = mysqli_query($conn,$query);
+    }
+?>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('login').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right"><a href="#" class="w3-text-blue"></a></p>
+      </div>
+</section>
+
+<!-- The seal 50 % off  Recently Viewed Adventures -->
+ <section>
+ <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div  class="snip1418" class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/1496373/pexels-photo-1496373.jpeg?auto=compress&cs=tinysrgb&w=400" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div style="display:inline-block" class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
+
+          <div class="w3-container w3-white">
+            <p><b>New York</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2016</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+    
+      </div>
+          </div>
+        </div>
+       <div   class="snip1418" class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/1662628/pexels-photo-1662628.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Paris" style="width:100%" style="height:300px" class="w3-hover-opacity">
+          <div style="display:inline-block" class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
+
+          <div class="w3-container w3-white">
+            <p><b>Paris</b></p>
+            <p class="w3-opacity">Sat 28 Nov 2016</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+    
+      </div>
+          </div>
+        </div>
+        <div  class="snip1418"  class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=400" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div style="display:inline-block" class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
+
+          <div class="w3-container w3-white">
+            <p><b>San Francisco</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2016</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+  
+      </div>
+          </div>
+        </div>
+ </section>
+<!-- no name salid img hubber itali -->
+
+<section>
+  <div class="cards-list">
+       <div class="card 1">
+         <div class="card_image"> <img src="https://images.pexels.com/photos/2404444/pexels-photo-2404444.jpeg?auto=compress&cs=tinysrgb&w=300" /> </div>
+         <div class="card_title title-white">
+         <p>ITALI</p>
+  </div>
+  </div>
+  <div class="card 2">
+  <div class="card_image">
+      <img src="https://images.pexels.com/photos/3996362/pexels-photo-3996362.jpeg?auto=compress&cs=tinysrgb&w=300" />
+  </div>
+  <div class="card_title title-white">
+    <p>Soidi</p>
+  </div>
+ </div>
+ <div class="card 3">
+  <div class="card_image">
+    <img src="https://images.pexels.com/photos/7459424/pexels-photo-7459424.jpeg?auto=compress&cs=tinysrgb&w=300" />
+  </div>
+  <div class="card_title">
+    <p>URIOP</p>
+  </div>
+</div>
+</section>
+ <!-- The Tour Section -->
+<sections>
+ 
+  <div class="w3-black" id="tour">
+      
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/4571925/pexels-photo-4571925.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>New York</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+      <s>$80.00</s>$19.00
+      </div>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+       <div class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Paris" style="width:100%" style="height:300px" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Paris</b></p>
+            <p class="w3-opacity">Sat 28 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+      <s>$80.00</s>$19.00
+      </div>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/4673437/pexels-photo-4673437.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>San Francisco</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+      <s>$80.00</s>$19.00
+      </div>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/2533090/pexels-photo-2533090.jpeg?auto=compress&cs=tinysrgb&w=400" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>New York</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+      <s>$80.00</s>$19.00
+      </div>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+       <div class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/2734521/pexels-photo-2734521.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Paris</b></p>
+            <p class="w3-opacity">Sat 28 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+      <s>$80.00</s>$19.00
+      </div>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/3163927/pexels-photo-3163927.jpeg?auto=compress&cs=tinysrgb&w=400" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>San Francisco</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+      <s>$80.00</s>$19.00
+      </div>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/163792/model-planes-airplanes-miniatur-wunderland-hamburg-163792.jpeg?auto=compress&cs=tinysrgb&w=400" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>New York</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+      <s>$80.00</s>$19.00
+      </div>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+       <div class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/1552212/pexels-photo-1552212.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Paris</b></p>
+            <p class="w3-opacity">Sat 28 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+      <s>$80.00</s>$19.00
+      </div>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/4859887/pexels-photo-4859887.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>San Francisco</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+      <s>$80.00</s>$19.00
+      </div>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</sections>
+<section>
+  <!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+      </header>
+      <?php
+  $servername = "localhost";
+  $username ="root";
+  $password ="";
+  $dbname ="bilregister";
+
+  $conn = mysqli_connect($servername,$username,$password,$dbname);
+      if($conn)
+       {
+        echo "";
+       }
+       else
+       {
+        echo "connect faild";
+       }
+
+?>
+<div class="row" style="display:inline-block">
+           <div class="col-75" style="display:inline-block">
+              <div class="container" style="display:inline-block">
+              
+          <form  method="POST" action="#" style="display:inline-block">
+                       
+                 <div class="row" style="display:inline-block">
+                      <div class="col-50" style="display:inline-block">
+                            <h3>Billing Address</h3>
+                     <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                          <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                     <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                          <input type="text" id="email" name="email" placeholder="john@example.com">
+                     <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                          <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                     <label for="city"><i class="fa fa-institution"></i> City</label>
+                          <input type="text" id="city" name="city" placeholder="New York">
+                 <div class="row">
+                    <div class="col-50">
+                      <label for="state">State</label>
+                         <input type="text" id="state" name="state" placeholder="NY">
+                    </div>
+                        <div class="col-50">
+                           <label for="zip">Zip</label>
+                                <input type="text" id="zip" name="zip" placeholder="10001">
+                        </div>
+                    </div>
+                   </div>
+                      <div class="col-50" style="display:inline-block">
+                              <h3>Payment</h3>
+                              <label for="fname">Accepted Cards</label>
+                      <div class="icon-container">
+                               <i class="fa fa-cc-visa" style="color:navy;"></i>
+                               <i class="fa fa-cc-amex" style="color:blue;"></i>
+                               <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                               <i class="fa fa-cc-discover" style="color:orange;"></i>
+                     </div>
+                          <label for="cname">Name on Card</label>
+                           <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                               <label for="ccnum">Credit card number</label>
+                           <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                               <label for="expmonth">Exp Month</label>
+                           <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                      <div class="row">
+                        <div class="col-50">
+                             <label for="expyear">Exp Year</label>
+                                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                         </div>
+                              <div class="col-50">
+                                     <label for="cvv">CVV</label>
+                                         <input type="text" id="cvv" name="cvv" placeholder="352">
+                               </div>
+                          </div>
+                    </div>
+               </div>
+                   <label>
+                     <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                   </label>
+                       <input type="submit" value="submit" class="btn"  name="submit">
+         </form>
+    </div>
+  </div>
+<?php
+     if(isset($_POST['submit']))
+    {
+      $_firstname  = $_POST['firstname'];
+      $_email      = $_POST['email'];
+      $_address    = $_POST['address'];
+      $_city       = $_POST['city'];
+      $_state      = $_POST['state'];
+      $_zip        = $_POST['zip'];
+      $_cardname   = $_POST['cardname'];
+      $_cardnumber = $_POST['cardnumber'];
+      $_expmonth   = $_POST['expmonth'];
+      $_expyear    = $_POST['expyear'];
+      $_cvv        = $_POST['cvv'];
+  
+     $query = "INSERT INTO  bilform VALUES('$_firstname','$_email',' $_address',' $_city','$_state','$_zip','$_cardname',
+      '$_cardnumber',' $_expmonth','$_expyear','$_cvv')";
+
+           $data = mysqli_query($conn,$query);
+    }
+?>
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
+  </section>
+
 
 <!-- video -->
 
@@ -963,512 +1481,10 @@ video{
           </div>
 </section>
 
-<!--prement  login Modal -->
-
-<section>
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-<div id="login" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('login').style.display='none'" 
-       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
-      <div class="w3-container">
-      <div class="form-question">
-      <div class="form-question__title">
-      <span>Where to ?</span>
-      </div>
-      <div>
-      <div class="select-box">
-       <div class="select-box__current" tabindex="1">
-       <div class="select-box__value">
-       <input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked"/>
-       <p class="select-box__input-text">LONDON </p>
-       </div>
-       <div class="select-box__value">
-      <input class="select-box__input" type="radio" id="1" value="2" name="Ben"/>
-      <p class="select-box__input-text">JAPAN</p>
-      </div>
-      <div class="select-box__value">
-      <input class="select-box__input" type="radio" id="2" value="3" name="Ben"/>
-      <p class="select-box__input-text">CHINA</p>
-       </div>
-      <div class="select-box__value">
-      <input class="select-box__input" type="radio" id="3" value="4" name="Ben"/>
-      <p class="select-box__input-text">USA</p>
-      </div>
-      <div class="select-box__value">
-      <input class="select-box__input" type="radio" id="4" value="5" name="Ben"/>
-      <p class="select-box__input-text">Toast</p>
-       </div><img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
-      </div>
-      <ul class="select-box__list">
-      <li>
-      <label class="select-box__option" for="0" aria-hidden="aria-hidden">LONDON</label>
-      </li>
-      <li>
-      <label class="select-box__option" for="1" aria-hidden="aria-hidden">ChINA</label>
-      </li>
-      <li>
-      <label class="select-box__option" for="2" aria-hidden="aria-hidden">JAPAN</label>
-      </li>
-      <li>
-      <label class="select-box__option" for="3" aria-hidden="aria-hidden">US</label>
-      </li>
-      <li>
-      <label class="select-box__option" for="4" aria-hidden="aria-hidden">Toast</label>
-      </li>
-      </ul>
-      </div>
-      </div>
-       <div class="input-container">
-        <input id="effective-date" type="date" name="effective-date" minlength="1" maxlength="64" placeholder=" " autocomplete="nope" required="required"></input>
-        <span class="bar"></span>
-         </div>
-        </div>
-       <div class="slidecontainer">
-       <input type="range" min="5000" max="100000" value="50" class="slider" id="myRange">
-       <p>$: <span id="demo"></span></p>
-       </div>
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $5000 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('login').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-      </div>
-</section>
-
-<!-- Automatic Slideshow Images -->
-
-<section>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://images.pexels.com/photos/4172918/pexels-photo-4172918.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Los Angeles</h3>
-      <p><b>We had the best time playing at Venice Beach!</b></p>   
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://images.pexels.com/photos/3008509/pexels-photo-3008509.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div>
-  </div>
-<div class="mySlides w3-display-container w3-center">
-    <img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div>
-  </div>
-</section>
-
-<!-- The Booking Section -->
-
-<section>
-        <div>
-          <h1 style="text-align:center"><b>BOOK NOW</b></h1>
-          <h2 style="text-align:center">Responsive Checkout Form</h2>
-          <p style="text-align:center">Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
-          <div class="row" style="display:inline-block">
-          <div class="col-75" style="display:inline-block">
-          <div class="container" style="display:inline-block">
-          <form action="/action_page.php" style="display:inline-block">
-          <div class="row" style="display:inline-block">
-          <div class="col-50" style="display:inline-block">
-            <h3>Billing Address</h3>
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com">
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-            <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="New York">
-           <div class="row">
-              <div class="col-50">
-                <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="NY">
-              </div>
-              <div class="col-50">
-                <label for="zip">Zip</label>
-                <input type="text" id="zip" name="zip" placeholder="10001">
-              </div>
-            </div>
-          </div>
-           <div class="col-50" style="display:inline-block">
-            <h3>Payment</h3>
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa fa-cc-visa" style="color:navy;"></i>
-              <i class="fa fa-cc-amex" style="color:blue;"></i>
-              <i class="fa fa-cc-mastercard" style="color:red;"></i>
-              <i class="fa fa-cc-discover" style="color:orange;"></i>
-            </div>
-            <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-            <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-            <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
-            <div class="row">
-              <div class="col-50">
-                <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018">
-              </div>
-              <div class="col-50">
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352">
-              </div>
-            </div>
-          </div>
-          </div>
-        <label>
-          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-        </label>
-        <input type="submit" value="Continue to checkout" class="btn">
-      </form>
-    </div>
-  </div>
-</sectionm>
-
-<!-- The seal 50 % off  Recently Viewed Adventures -->
-
-<section >
-      <h1 style="text-align:center"><b>Recently Viewed Adventures</b></h1>
-      <div style="display:inline-block">
-      <figure  class="snip1418">
-           <img src="https://images.pexels.com/photos/3041347/pexels-photo-3041347.jpeg?auto=compress&cs=tinysrgb&w=300" alt="sample85" style="height:234px" width="600px" />
-               <div class="add-to-cart">
-                   <i class="ion-android-add"></i><span>-50% OFF</span>
-               </div>
-       <figcaption >
-                <h3>Pudol Doux</h3>
-                <p>All this modern technology just makes people try to do everything at once.</p>
-             <div class="price">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                    <s>$40.00</s>$19.00
-                         <button>BOOK NOW</button>
-             </div>
-        </figcaption><a href="#" ></a>
-        </figure>
-      <figure class="snip1418 hover">
-         <img src="https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?auto=compress&cs=tinysrgb&w=300" alt="sample96"  style="height:234px" width="600px"  />
-              <div class="add-to-cart">
-                   <i class="ion-android-add"></i><span>-30% OFF</span>
-              </div>
-      <figcaption >
-           <h3>Kurie Secco</h3>
-               <p>If you do the job badly enough, sometimes you don't get asked to do it again. </p>
-           <div class="price">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-                 <s>$60.00</s>$19.00
-                   <button>BOOK NOW</button>
-          </div>
-      </figcaption ><a href="#"></a>
-        </figure >
-<figure  class="snip1418"><img src="https://images.pexels.com/photos/2122406/pexels-photo-2122406.jpeg?auto=compress&cs=tinysrgb&w=300" alt="sample92"  style="height:234px" width="600px"  />
-  <div class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
-  <figcaption >
-    <h3>Zosaisan Invec</h3>
-    <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-    <div class="price">
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
-      <s>$80.00</s>$19.00
-      <button>BOOK NOW</button>
-    </div>
-  </figcaption ><a href="#"></a>
-  </figure>
-  <figure  class="snip1418"><img src="https://images.pexels.com/photos/307006/pexels-photo-307006.jpeg?auto=compress&cs=tinysrgb&w=300" alt="sample92"  style="height:234px" width="600px"  />
-  <div class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
-  <figcaption >
-    <h3>Zosaisan Invec</h3>
-    <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-   <div class="price">
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
-      <s>$80.00</s>$19.00
-      <button>BOOK NOW</button>
-    </div>
-  </figcaption ><a href="#"></a>
-  </figure>
-  <figure  class="snip1418"><img src="https://images.pexels.com/photos/2827374/pexels-photo-2827374.jpeg?auto=compress&cs=tinysrgb&w=300" alt="sample92"  style="height:234px" width="600px" />
-  <div class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
-  <figcaption >
-    <h3>Zosaisan Invec</h3>
-    <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-    <div class="price">
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
-      <s>$80.00</s>$19.00
-      <button>BOOK NOW</button>
-    </div>
-  </figcaption ><a href="#"></a>
-  </figure>
-  <figure  class="snip1418"><img src="https://images.pexels.com/photos/2631613/pexels-photo-2631613.jpeg?auto=compress&cs=tinysrgb&w=300" alt="sample92"  style="height:234px" width="600px"  />
-  <div class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
-  <figcaption >
-    <h3>Zosaisan Invec</h3>
-    <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-    <div class="price">
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
-      <s>$80.00</s>$19.00
-      <button>BOOK NOW</button>
-    </div>
-  </figcaption ><a href="#"></a>
-  </figure>
-  <figure  class="snip1418"><img src="https://images.pexels.com/photos/1020016/pexels-photo-1020016.jpeg?auto=compress&cs=tinysrgb&w=300" alt="sample92"   style="height:234px" width="600px" />
-  <div class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
-  <figcaption >
-    <h3>Zosaisan Invec</h3>
-    <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-     <div class="price">
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
-      <s>$80.00</s>$19.00
-      <button>BOOK NOW</button>
-    </div>
-  </figcaption ><a href="#"></a>
-  </figure>
-  <figure  class="snip1418"><img src="https://images.pexels.com/photos/686288/pexels-photo-686288.jpeg?auto=compress&cs=tinysrgb&w=300" alt="sample92"  style="height:234px" width="600px" />
-  <div class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
-   <figcaption >
-        <h3>Zosaisan Invec</h3>
-       <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-       <div class="price">
-       <span class="fa fa-star checked"></span>
-       <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-       <span class="fa fa-star"></span>
-      <s>$80.00</s>$19.00
-      <button>BOOK NOW</button>
-      </div>
-     </figcaption ><a href="#"></a>
-     </figure>
-</div>
-</section>
-
-<!-- no name salid img hubber -->
-
-<section>
-  <div class="cards-list">
-       <div class="card 1">
-         <div class="card_image"> <img src="https://images.pexels.com/photos/2404444/pexels-photo-2404444.jpeg?auto=compress&cs=tinysrgb&w=300" /> </div>
-         <div class="card_title title-white">
-         <p>ITALI</p>
-  </div>
-  </div>
-  <div class="card 2">
-  <div class="card_image">
-      <img src="https://images.pexels.com/photos/3996362/pexels-photo-3996362.jpeg?auto=compress&cs=tinysrgb&w=300" />
-  </div>
-  <div class="card_title title-white">
-    <p>Soidi</p>
-  </div>
- </div>
- <div class="card 3">
-  <div class="card_image">
-    <img src="https://images.pexels.com/photos/7459424/pexels-photo-7459424.jpeg?auto=compress&cs=tinysrgb&w=300" />
-  </div>
-  <div class="card_title">
-    <p>URIOP</p>
-  </div>
-</div>
-<div class="card 4">
-  <div class="card_image">
-  <img src="https://th.bing.com/th/id/R.ae1b737c528597281063ef43385ae711?rik=QC6zHOc%2bIs1A6w&riu=http%3a%2f%2fwww.dubaidaytours.com%2fwp-content%2fuploads%2f2016%2f03%2fDubai-Day-Tours.jpg&ehk=hTlQ3m4XzRjHTQf7S6uGW3mPLEC1qvMgXBq3WLcubVE%3d&risl=&pid=ImgRaw&r=0" />
-
-  </div>
-  <div class="card_title title-black">
-    <p>DUBI</p>
-  </div>
-</div>
-  </div>
-</section>
-
    <!-- The servibes---- Section -->
 
-<sections>
-    <div>
-      <h1 style="text-align: center"><b>SERVICES</b></h1>
-    </div>
-    <div>
-    <div class="cards" >
-        <img src="https://th.bing.com/th/id/R.e780db55109d72e3a43ba90ebd713631?rik=ZNjOAaEglMEDzA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_221506.png&ehk=M9quQA6lwi0SExEd1HKt1%2fos9D%2fzFQFpmf7CAcWbBIw%3d&risl=&pid=ImgRaw&r=0" alt="Avatar" style="width:100%">
-        <h1 style="text-align: center">Affordable Hotels</h1>
-        <p>
-        With 24/7 customer service, flexible 
-        booking conditions and extensive insurance options, we are there for you when 
-        plans change. See my Options
-        </p>
-        </div>
-        <div class="cards" >
-        <img src="https://cdn2.iconfinder.com/data/icons/food-drinks-vol-2-1/48/052-512.png" alt="Avatar" style="width:100%">
-        <h1 style="text-align: center">Food And Drinks</h1>
-        <p>
-        With 24/7 customer service, flexible 
-        booking conditions and extensive insurance options, we are there for you when 
-        plans change. See my Options
-        </p>
-        </div>
-        <div class="cards" >
-        <img src="https://dynovoglobal.com/wp-content/uploads/2019/06/safety-icone.png" alt="Avatar" style="width:100%">
-        <h1 style="text-align: center">Safty Guide</h1>
-        <p>
-        With 24/7 customer service, flexible 
-        booking conditions and extensive insurance options, we are there for you when 
-        plans change. See my Options
-        </p>
-        </div>
-        <div class="cards" >
-        <img src="https://cdn0.iconfinder.com/data/icons/shopping-and-commerce-2-12/66/78-512.png" alt="Avatar" style="width:100%">
-        <h1 style="text-align: center">Around The World</h1>
-        <p>
-        With 24/7 customer service, flexible 
-        booking conditions and extensive insurance options, we are there for you when 
-        plans change. See my Options
-        </p>
-        </div>
-        <div class="cards" >
-        <img src="https://cdn1.iconfinder.com/data/icons/circle-saigon-attractions/40/035-airport-plane-flight-transport-512.png" alt="Avatar" style="width:100%">
-        <h1 style="text-align: center">Fast Travel</h1>
-        <p>
-        With 24/7 customer service, flexible 
-        booking conditions and extensive insurance options, we are there for you when 
-        plans change. See my Options
-        </p>
-        </div>
-        <div class="cards" >
-        <img src="https://cdn4.iconfinder.com/data/icons/positive-character-traits-alphabet-a/250/positive-A001-512.png" alt="Avatar" style="width:100%">
-        <h1 style="text-align: center">Adventures</h1>
-        <p>
-        With 24/7 customer service, flexible 
-        booking conditions and extensive insurance options, we are there for you when 
-        plans change. See my Options
-        </p>
-        </div>
-        </div>
-</sections>
-
- <!-- The tout -->
-
-<section>
-   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="ABOUT">
-    <h2 class="w3-wide">THE TOUR</h2>
-    <p class="w3-opacity"><i>We love music</i></p>
-    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</section>
-</section>
-<!-- next tour -->
-</section>
-
-<!-- The nig color-- Adventure, Your Way- -->
-<section>
-      <div class="mysDiv">
-         <div class="mytext" >
-             <h2 class="mytext">Adventure, Your Way</h2>
-                <p >No matter who you’re looking to travel with,
-                        you can depend on our 2,500 trusted operators 
-                         to make sure everything’s taken care of.
-                          Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Etiam semper diam at erat
-                            pulvinar, at pulvinar felis blandit.
-                            Vestibulum volutpat tellus diam,
-                               consequat gravida libero rhoncus ut.
-                </p>
-           </div>
-  <div class="cards">
-  <img src="https://cdn.tourradar.com/s3/content-pages/391/464x208/xoOlJd.jpg" alt="Avatar" style="width:100%">
-  <h4><b>Grup Adventures</b></h4> 
-  <p>Join a group and froge lifelong friendships and family</p>
-  <a style="color:#0074D9">Explore</a> 
-  </div>
-  <div class="cardss">
-  <img src="https://cdn.tourradar.com/s3/content-pages/391/464x208/rwKZJn.jpg" alt="Avatar" style="width:100%">
-    <h4><b>Private Advuntures</b></h4> 
-    <p>Travel exclusively will your friend and family</p> 
-    <a style="color:#0074D9">Explore</a> 
-  </div>
-  <div class="cardsss">
-  <img src="https://cdn.tourradar.com/s3/content-pages/391/464x208/aGEySI.jpg" alt="Avatar" style="width:100%">
-  <h4><b>Tailor-Made Advuntures</b></h4> 
-  <p>Costomize and  existining itinerary and created your one</p>
-  <a style="color:#0074D9">Explore</a>  
-  </div>
-</div>
-</section>
-
-<!-- The  image wrte-- Sustainable Travel  Section -->
-
-  <section> 
-  <div class="cards-nich" >
-   <img  src="https://cdn4.iconfinder.com/data/icons/eco-glyph/614/1227_-_Earth_on_hand-1024.png" alt="Avatar" style="width:10%">
-   <h1>Sustainable Travel and Journey</h1>
-   <p>
-    Adventure sustainably with TourRadar. 
-    We are committed to conscious travel, 
-    from responsible operators to our Climate Action 
-    Plan and carbon measurements. View our pledge
-    </p>
-    </div>
-    <div class="cardsss-nich" >
-    <img src="https://cdn-icons-png.flaticon.com/128/447/447031.png" alt="Avatar" style="width:10%">
-    <h1 >Peace of Mind</h1>
-    <p >
-    With 24/7 customer service, flexible 
-    booking conditions and extensive insurance options, we are there for you when 
-    plans change. See my Options
-    </p>
-   </div>
-</section>
 
 <!-- image salaid --galary -->
-
 <section>
      <div>
           <h1 style="text-align:center">GALLERY</h1>
@@ -1479,7 +1495,7 @@ video{
                  <img src="https://images.pexels.com/photos/1620372/pexels-photo-1620372.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" class="image" style="width:300px" style="height:300px">
                        <h1 class="text"><b>Amazing Places</b></h1>
                        <p class="texts">Find out what’s happening atal offers</p>
-                       <button class="textss">See More</button>     
+                       <button class="textss" href="./media.html"  >See More</button>     
             </div>
        </div>
        <div class="containers" style="display:inline-block" style="width:300px" style="height:300px">
@@ -1488,7 +1504,7 @@ video{
                     <img src="https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" class="image" style="width:300px" style="height:300px">
                         <h1 class="text"><b>Amazing Places</b></h1>
                          <p class="texts">Find out what’s happening atal offers</p>
-                         <button class="textss">See More</button>     
+                         <button href="./media.html" class="textss">See More</button>     
                </div>
         </div>
         <div class="containers" style="display:inline-block" style="width:300px" style="height:300px">
@@ -1545,24 +1561,6 @@ video{
                   <button class="textss">See More</button>     
            </div>
        </div>
-       <div class="containers" style="display:inline-block"  style="width:300px" style="height:300px">
-                  <img src="https://images.pexels.com/photos/5207636/pexels-photo-5207636.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" class="image" style="width:300px" style="height:300px">
-         <div class="overlay"  style="width:300px" style="height:300px">
-                  <img src="https://images.pexels.com/photos/5466393/pexels-photo-5466393.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" class="image" style="width:300px" style="height:300px">
-                  <h1 class="text"><b>Amazing Places</b></h1>
-                  <p class="texts">Find out what’s happening atal offers</p>
-                  <button class="textss">See More</button>     
-          </div>
-       </div>
-       <div class="containers" style="display:inline-block"  style="width:300px" style="height:300px" >
-                 <img src="https://images.pexels.com/photos/3617193/pexels-photo-3617193.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" class="image" style="width:300px" style="height:300px">
-          <div class="overlay"  style="width:300px" style="height:300px">
-               <img src="https://images.pexels.com/photos/3308746/pexels-photo-3308746.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" class="image" style="width:300px" style="height:300px">
-               <h1 class="text"><b>Amazing Places</b></h1>
-               <p class="texts">Find out what’s happening atal offers</p>
-                <button class="textss">See More</button>     
-         </div>
-       </div>
   </section>
 
 <!-- image nig mack galary--- TourRadar Spotlight -->
@@ -1574,7 +1572,7 @@ video{
         </p>
         <div class="cards" >
         <img src="https://cdn.tourradar.com/s3/content-pages/391/686x384/Nz30uh.png" alt="Avatar" style="width:100%">
-        <h1 >Deals of The Week and EveryWare</h1>
+        <h1 >Deals of The Week </h1>
         <p>
         With 24/7 customer service, flexible 
         booking conditions and extensive insurance options, we are there for you when 
@@ -1601,55 +1599,8 @@ video{
         </div>
 </sections>
 
-      <!-- The Tour packeg Section token button -->
-
-<section>
-     <div class="w3-black" id="PACKAGES">
-     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center"></h2>
-      <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
-
-      <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-        <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-        <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
-      </ul>
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="https://images.pexels.com/photos/4321565/pexels-photo-4321565.jpeg?auto=compress&cs=tinysrgb&w=300" alt="New York" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>New York</b></p>
-            <p class="w3-opacity">Fri 27 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="https://images.pexels.com/photos/2770933/pexels-photo-2770933.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Paris</b></p>
-            <p class="w3-opacity">Sat 28 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="https://images.pexels.com/photos/590133/pexels-photo-590133.jpeg?auto=compress&cs=tinysrgb&w=300" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>San Francisco</b></p>
-            <p class="w3-opacity">Sun 29 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  
+      
 <!-- Ticket Modal -->
-
 <section>
   <div id="ticketModal" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
@@ -1713,7 +1664,7 @@ video{
         </div>
         <div class="cards" >
         <img src="https://images.pexels.com/photos/9451272/pexels-photo-9451272.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" style="width:100%">
-        <h1 style="text-align: center">Safty Guide</h1>
+        <h1 style="text-align: center">Safty Guide Fasr</h1>
         <p>
         With 24/7 customer service, flexible 
         booking conditions and extensive insurance options, we are there for you when 
@@ -1729,7 +1680,7 @@ video{
         </div>
         <div class="cards" >
         <img src="https://images.pexels.com/photos/5263287/pexels-photo-5263287.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" style="width:100%">
-        <h1 style="text-align: center">Around The World</h1>
+        <h1 style="text-align: center">Around </h1>
         <p>
         With 24/7 customer service, flexible 
         booking conditions and extensive insurance options, we are there for you when 
@@ -1779,35 +1730,27 @@ video{
     </div>
 </section>
 
-<!-- The Contact Section -->
+
+<!-- Automatic Slideshow Images -->
 
 <section>
-<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="CONTACT">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
-      </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
-      </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="https://th.bing.com/th/id/OIP.5eZCqiW0TEt3FeY2_di0cwHaHa?pid=ImgDet&w=206&h=206&c=7" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Los Angeles</h3>
+      <p><b>We had the best time playing at Venice Beach!</b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="https://th.bing.com/th/id/OIP.0hYitUyQo8PdyTUJaQNivQHaDC?pid=ImgDet&rs=1" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>New York</h3>
+      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
     </div>
   </div>
 </section>
+
+
 
 <!-- Footer -->
 
@@ -1821,6 +1764,27 @@ video{
   <p class="w3-medium">Powered by <a href="./about.html" target="_blank">farjama Akter mim</a></p>
 </footer>
 <!--futter-->
+
+<div class="content">
+	
+  	<!-- notification message -->
+  	<?php if (isset($_SESSION['success'])) : ?>
+      <div class="error success" >
+      	<h3>
+          <?php 
+          	echo $_SESSION['success']; 
+          	unset($_SESSION['success']);
+          ?>
+      	</h3>
+      </div>
+  	<?php endif ?>
+
+    <!-- logged in user information -->
+    <?php  if (isset($_SESSION['username'])) : ?>
+    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+    <?php endif ?>
+</div>
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
@@ -1836,7 +1800,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
+  setTimeout(carousel, 3000);    
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -1885,13 +1849,44 @@ $(".hover").mouseleave(function () {
 
 
 <script>
-
 function videoslider(links){
     document.querySelector(".slider").src = links;
 }
-
 </script>
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
 
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
-
